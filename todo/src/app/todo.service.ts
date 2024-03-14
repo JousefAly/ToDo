@@ -23,4 +23,8 @@ export class TodoService {
       );
     }
 
+    addTodo(todo: ToDo): Observable<ToDo> {
+      return this.http.post<ToDo>(`${this.apiUrl}/ToDos`, todo);
+    }
+
 }

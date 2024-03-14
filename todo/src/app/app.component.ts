@@ -20,7 +20,8 @@ import { ToDo } from './ToDo';
 export class AppComponent {
   todos: ToDo[] = [];
   title = 'todo';
-  formData = {
+  formData: ToDo = {
+    Id: 0,
     Text :''
   }
 
@@ -39,7 +40,17 @@ export class AppComponent {
 
 
   onSubmit(form: any){
-    if(form.valid)
-    console.log("form submitted", this.formData)    
+    if(form.valid){
+      this.todoService.addTodo(this.formData).subscribe(
+        todo => {
+          console.log('Todo added:', todo);
+          // Optionally, reset the form or do any other actions
+        },
+        error => {
+          console.error('Error adding todo:', error);
+        }
+      );
+    }
+      
   }
 }
