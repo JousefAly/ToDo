@@ -3,9 +3,10 @@ import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { TodoService } from './todo.service';
+import { ToDo } from './ToDo';
 
 @Component({
   selector: 'app-root',
@@ -13,24 +14,20 @@ import { TodoService } from './todo.service';
   imports: [RouterOutlet, FormsModule,HttpClientModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  providers: [TodoService]
   
 })
 export class AppComponent {
-  todos: any[] = [];
+  todos: ToDo[] = [];
   title = 'todo';
   formData = {
     Text :''
   }
 
-  private apiUrl = "https://localhost:7234"
-  constructor(private http: HttpClient) { }
-
-  getTodos(): Observable<any[]> {
-      return this.http.get<any[]>(`${this.apiUrl}/ToDos`);
-    }
+  constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
-    this.getTodos().subscribe(
+    this.todoService.getTodos().subscribe(
       (data) => {
         this.todos = data;
       },
@@ -43,7 +40,6 @@ export class AppComponent {
 
   onSubmit(form: any){
     if(form.valid)
-    console.log("form submitted", this.formData)
-    console.log(this.todos.length)
+    console.log("form submitted", this.formData)    
   }
 }
