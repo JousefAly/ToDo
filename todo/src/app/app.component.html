@@ -28,10 +28,10 @@
 
     </div>
     <div class="add-new-todo">
-      <form action="">
-        <input name="text" placeholder="To Do"/>
-        <button>Add</button>
-    </form>
+      <form #newTodoForm="ngForm" (ngSubmit)="onSubmit(newTodoForm)">
+        <input type="text" name="newTodo" id="newTodo" [(ngModel)]="formData.Text" placeholder="To Do" required />
+        <button type="submit">Add</button>
+      </form>
     </div>
   </div>
 </main>
