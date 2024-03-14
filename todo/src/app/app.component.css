@@ -1,0 +1,36 @@
+header{
+   
+    background-color: antiquewhite;
+    padding:10px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: beige;
+}
+.todos{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    
+    padding:20px;
+}
+.todos{
+    height: 80%;
+}
+.todo{
+    margin:20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-action{
+    margin-right: 5px;
+}
+.add-new-todo{
+   
+}
