@@ -26,5 +26,10 @@ export class TodoService {
     addTodo(todo: ToDo): Observable<ToDo> {
       return this.http.post<ToDo>(`${this.apiUrl}/ToDos`, todo);
     }
+   
+    deleteTodo(id: number): Observable<void> {
+      let urlPath = `${this.apiUrl}/ToDos/Delete/${id}`;
+      return this.http.delete<void>(urlPath);
+    }
 
 }

@@ -25,5 +25,12 @@ namespace ToDoApi.Controllers
             ToDos.ToDosData.Add(todo);
             return Ok();
         }
+     
+        [HttpDelete("[action]/{id}")]
+        public ActionResult Delete(int id)
+        {
+            ToDos.ToDosData.RemoveAll(x => x.Id == id);
+            return Ok();
+        }
     }
 }

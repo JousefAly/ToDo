@@ -32,5 +32,14 @@ header{
     margin-right: 5px;
 }
 .add-new-todo{
-   
+   margin: 50px;
+}
+
+.add-new-todo input{
+    width: 500px;
+    height:30px
+}
+
+.add-new-todo button{
+    height: 30px;
 }

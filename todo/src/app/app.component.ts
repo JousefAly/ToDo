@@ -7,11 +7,12 @@ import { map, Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { TodoService } from './todo.service';
 import { ToDo } from './ToDo';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule,HttpClientModule, CommonModule],
+  imports: [RouterOutlet, FormsModule,HttpClientModule, CommonModule,FontAwesomeModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   providers: [TodoService]
@@ -28,29 +29,41 @@ export class AppComponent {
   constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
+    this.GetToDos();
+  }
+
+
+  private GetToDos() {
     this.todoService.getTodos().subscribe(
-      (data) => {
-        this.todos = data;
-      },
-      (error) => {
-        console.error('Error fetching todos:', error);
+      //
+      {
+        next: response => this.todos = response,
+        error: error => console.error('Error fetching todos:', error)
       }
     );
   }
-
 
   onSubmit(form: any){
     if(form.valid){
       this.todoService.addTodo(this.formData).subscribe(
         todo => {
           console.log('Todo added:', todo);
-          // Optionally, reset the form or do any other actions
+          window.location.reload()
         },
         error => {
           console.error('Error adding todo:', error);
         }
       );
+   
     }
       
+  }
+
+  onDelete(todo: ToDo){
+    this.todoService.deleteTodo(todo.Id).subscribe();
+    window.location.reload();
+  }
+  onUpdate(todo: ToDo){
+    
   }
 }

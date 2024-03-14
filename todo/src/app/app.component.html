@@ -12,19 +12,11 @@
           {{ todo.Text }}
         </div>
         <div class="todo-actions">
-          <a class="todo-action" href="">remove</a>
-          <a class="todo-action" href="">update</a>
+          <button class="todo-action" (click)="onDelete(todo)">remove</button>
+          <button class="todo-action" (click)="onUpdate(todo)">update</button>
         </div>
       </div>
-      <!-- <div class="todo">
-        <div class="todo-text">
-          Play Chess
-        </div>
-        <div class="todo-actions">
-          <a class="todo-action" href="">remove</a>
-          <a class="todo-action" href="">update</a>
-        </div>
-      </div> -->
+     
 
     </div>
     <div class="add-new-todo">
