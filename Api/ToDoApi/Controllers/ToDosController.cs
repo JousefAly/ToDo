@@ -32,5 +32,12 @@ namespace ToDoApi.Controllers
             ToDos.ToDosData.RemoveAll(x => x.Id == id);
             return Ok();
         }
+        [HttpPut("{id}")]
+        public ActionResult Put(int id, ToDo todo)
+        {
+           var updateTodo =  ToDos.ToDosData.FirstOrDefault(x => x.Id ==id);
+            updateTodo.Text = todo.Text;
+            return Ok();
+        }
     }
 }

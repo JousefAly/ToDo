@@ -40,6 +40,10 @@ header{
     height:30px
 }
 
+.todo-text input{
+    width: 500px;
+    height:30px
+}
 .add-new-todo button{
     height: 30px;
 }

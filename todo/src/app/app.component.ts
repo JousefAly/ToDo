@@ -64,6 +64,6 @@ export class AppComponent {
     window.location.reload();
   }
   onUpdate(todo: ToDo){
-    
+    this.todoService.updateTodo(todo).subscribe();    
   }
 }

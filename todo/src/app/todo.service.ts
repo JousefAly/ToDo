@@ -32,4 +32,9 @@ export class TodoService {
       return this.http.delete<void>(urlPath);
     }
 
+    updateTodo(todo: ToDo): Observable<ToDo> {
+      let urlPath = `${this.apiUrl}/ToDos/${todo.Id}`;
+      return this.http.put<ToDo>(urlPath, todo);
+    }
+
 }
