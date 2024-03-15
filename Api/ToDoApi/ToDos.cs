@@ -1,4 +1,6 @@
-﻿namespace ToDoApi
+﻿using ToDoRepository;
+
+namespace ToDoApi
 {
     public static class ToDos
     {

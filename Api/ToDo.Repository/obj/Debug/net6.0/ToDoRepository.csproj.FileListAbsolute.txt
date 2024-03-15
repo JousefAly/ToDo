@@ -1,0 +1,14 @@
+D:\workspace\me\To-Do list\Api\ToDo.Repository\obj\Debug\net6.0\ToDoRepository.csproj.AssemblyReference.cache
+D:\workspace\me\To-Do list\Api\ToDo.Repository\obj\Debug\net6.0\ToDoRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\me\To-Do list\Api\ToDo.Repository\obj\Debug\net6.0\ToDoRepository.AssemblyInfoInputs.cache
+D:\workspace\me\To-Do list\Api\ToDo.Repository\obj\Debug\net6.0\ToDoRepository.AssemblyInfo.cs
+D:\workspace\me\To-Do list\Api\ToDo.Repository\obj\Debug\net6.0\ToDoRepository.csproj.CoreCompileInputs.cache
+D:\workspace\me\To-Do list\Api\ToDo.Repository\bin\Debug\net6.0\ToDoRepository.deps.json
+D:\workspace\me\To-Do list\Api\ToDo.Repository\bin\Debug\net6.0\ToDoRepository.runtimeconfig.json
+D:\workspace\me\To-Do list\Api\ToDo.Repository\bin\Debug\net6.0\ToDoRepository.dll
+D:\workspace\me\To-Do list\Api\ToDo.Repository\bin\Debug\net6.0\ToDoRepository.pdb
+D:\workspace\me\To-Do list\Api\ToDo.Repository\obj\Debug\net6.0\ToDoRepository.dll
+D:\workspace\me\To-Do list\Api\ToDo.Repository\obj\Debug\net6.0\refint\ToDoRepository.dll
+D:\workspace\me\To-Do list\Api\ToDo.Repository\obj\Debug\net6.0\ToDoRepository.pdb
+D:\workspace\me\To-Do list\Api\ToDo.Repository\obj\Debug\net6.0\ToDoRepository.genruntimeconfig.cache
+D:\workspace\me\To-Do list\Api\ToDo.Repository\obj\Debug\net6.0\ref\ToDoRepository.dll
