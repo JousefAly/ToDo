@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { TodoService } from './todo.service';
 import { ToDo } from './ToDo';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {faTrash} from '@fortawesome/free-solid-svg-icons';
+import {faPlus} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +18,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   providers: [TodoService]
   
 })
-export class AppComponent {
+export class AppComponent {  
+
+  faTrash = faTrash;
+  faPlus = faPlus;
+
   todos: ToDo[] = [];
   title = 'todo';
   formData: ToDo = {
