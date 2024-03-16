@@ -19,6 +19,7 @@ namespace ToDoApi
             var connectionString = builder.Configuration.GetConnectionString("ToDoDB");
             builder.Services.AddDbContext<ToDoContext>(options =>
             options.UseSqlServer(connectionString));
+            builder.Services.AddScoped<IToDosRepository, ToDosRepository>();
 
             builder.Services.AddCors(options =>
             {
