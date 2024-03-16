@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClient } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { TodoService } from './todo.service';
 import { ToDo } from './ToDo';
@@ -35,7 +33,7 @@ export class AppComponent {
 
   private GetToDos() {
     this.todoService.getTodos().subscribe(
-      //
+     
       {
         next: response => this.todos = response,
         error: error => console.error('Error fetching todos:', error)
@@ -64,6 +62,7 @@ export class AppComponent {
       next: _ => window.location.reload()
     });
   }
+
   onUpdate(todo: ToDo){
     this.todoService.updateTodo(todo).subscribe();    
   }
