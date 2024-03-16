@@ -65,3 +65,6 @@ D:\workspace\me\To-Do list\Api\ToDoApi\bin\Debug\net6.0\runtimes\win\lib\netstan
 D:\workspace\me\To-Do list\Api\ToDoApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\workspace\me\To-Do list\Api\ToDoApi\bin\Debug\net6.0\ToDoRepository.dll
 D:\workspace\me\To-Do list\Api\ToDoApi\bin\Debug\net6.0\ToDoRepository.pdb
+D:\workspace\me\To-Do list\Api\ToDoApi\obj\Debug\net6.0\ToDoApi.MvcApplicationPartsAssemblyInfo.cs
+D:\workspace\me\To-Do list\Api\ToDoApi\bin\Debug\net6.0\Humanizer.dll
+D:\workspace\me\To-Do list\Api\ToDoApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
