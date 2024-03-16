@@ -1,49 +1,97 @@
-header{
-   
-    background-color: antiquewhite;
-    padding:10px;
-}
-
-.container{
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  .add-new-todo {
+    margin-bottom: 20px;
+  }
+  
+  .add-new-todo form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: beige;
-}
-.todos{
-    display:flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    
-    padding:20px;
-}
-.todos{
-    height: 80%;
-}
-.todo{
-    margin:20px;
+  }
+  
+  .add-new-todo input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .add-new-todo button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-new-todo button:hover {
+    background-color: #555;
+  }
+  
+  .todos {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .todo {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-.todo-action{
-    margin-right: 5px;
-}
-.add-new-todo{
-   margin: 50px;
-}
-
-.add-new-todo input{
-    width: 500px;
-    height:30px
-}
-
-.todo-text input{
-    width: 500px;
-    height:30px
-}
-.add-new-todo button{
-    height: 30px;
-}
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .todo-text {
+    flex: 1;
+  }
+  
+  .todo-text input {
+    width: calc(100% - 40px); /* Adjust the width as needed */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .todo-text input:focus {
+    outline: none;
+    border-color: #007bff; /* Change the border color on focus */
+  }
+  
+  .todo-actions {
+    margin-left: 10px;
+  }
+  
+  .todo-action {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .todo-action:hover {
+    background-color: #ddd;
+  }
+  
