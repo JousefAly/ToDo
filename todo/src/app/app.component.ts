@@ -60,8 +60,9 @@ export class AppComponent {
   }
 
   onDelete(todo: ToDo){
-    this.todoService.deleteTodo(todo.Id).subscribe();
-    window.location.reload();
+    this.todoService.deleteTodo(todo.Id).subscribe({
+      next: _ => window.location.reload()
+    });
   }
   onUpdate(todo: ToDo){
     this.todoService.updateTodo(todo).subscribe();    
